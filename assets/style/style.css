@@ -21,6 +21,8 @@ nav{
     height: 20vh;
     background-color:#0c1713;
 }
+
+
 .cartas{
     display: flex;
     flex-direction: column;
@@ -241,9 +243,6 @@ caption{
     font-size: 25px;
     
 }
-
-
-
 table{
     background-color:#ced7c092;
     font-size:17px;
