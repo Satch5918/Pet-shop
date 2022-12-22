@@ -9,7 +9,7 @@ export function cards (div,objdato) {
             <div><p class="card-link textocard"> Stock: ${card.disponibles} U</p></div>
             <div class="card-body bodycard">
                 <p class="card-link textocard">Price: $ ${card.precio}</p>
-                <a href="./detalles.html?id=${card._id} " class="card-link button">Details</a>
+                <a href="./detalles.html?id=${card._id} " class="card-link button">Mas detalles</a>
                 </div>
             </div>`;    
     });
@@ -31,8 +31,8 @@ export function CardDetails(contain,datosCard){
   <p class="pdetails" >${datosCard.descripcion}</p>
   <p>Price: $${datosCard.precio}</p>
   <div class="btn-group ">
-    <a href="#" class="btn btn-dark butonDetails" aria-current="page">Buy</a>
-    <a href="./index.html" class="btn btn-dark butonDetails">Carrito</a>
+    <a href="#" class="btn btn-dark butonDetails" aria-current="page">Comprar</a>
+    <a href="" class="btn btn-dark butonDetails">Carrito</a>
   </div>
   </div>`  
 }
