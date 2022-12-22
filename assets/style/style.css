@@ -16,8 +16,9 @@ nav{
     height: 20vh;
     background-image: url("../img/baner\ verde.jpg");
 }
-
-
+#butonNav{
+   background-color: #000000 !important; 
+}
 .cartas{
     display: flex;
     flex-direction: column;
@@ -59,14 +60,10 @@ h5{
 .linav{
     display: flex;
     flex-direction: column;
-   
 }
-
-
-
 .anvar{
     padding: 4px;
-    border: 3px solid black;
+    border: 2px solid black;
     color: rgb(0, 0, 0);
     width: 100px;
     height: 50px;
@@ -75,7 +72,7 @@ h5{
     display:flex;
     justify-content:center;
     align-items: center;
-    margin: 0 8px;
+    margin: 5px 8px;
     box-shadow: rgba(255, 255, 255, 0.25) 0px 0.0625em 0.0625em, rgba(255, 255, 255, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     
 }
@@ -85,15 +82,16 @@ h5{
     color: white;
     font-size: 20px;
 }
-
-#navbarResponsive{
-   display: flex;
-   justify-content: center;
+#imgHome{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 
 .header{
     background-color: #ede6f2;
+    margin: 20px 0;
 }
 
 .boxcheck{
