@@ -1,12 +1,12 @@
 export function cards (div,objdato) {
     let stringcard = "";
     objdato.forEach(card => { 
-        stringcard += `<div class="card col-3">
-        <img class="cardimg" src=${card.imagen} alt="${card.producto}">
+        stringcard += `<div class="card col-3" id="card-3">
+            <img class="cardimg" src=${card.imagen} alt="${card.producto}">
             <div class="card-body cartas">
                 <h5 class="card-title">${card.producto}</h5>
             </div>
-            <div> <p class="card-link textocard">stock: ${card.disponibles} U</p></div>
+            <div><p class="card-link textocard"> Stock: ${card.disponibles} U</p></div>
             <div class="card-body bodycard">
                 <p class="card-link textocard">Price: $ ${card.precio}</p>
                 <a href="./carrito.html?id=${card._id} " class="card-link button">Details</a>

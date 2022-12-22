@@ -1,4 +1,3 @@
-
 import {cards, filtradoPorBusqueda} from '../../module/funciones.js'
 const div2 = document.getElementById('divrow1');
 const search = document.getElementById('search')
@@ -18,6 +17,5 @@ fetch('https://mindhub-xj03.onrender.com/api/petshop')
 
 search.addEventListener('input', () => {
 let filtradoPorBusquedas = filtradoPorBusqueda(farmacia,search.value)
-
 cards(div2,filtradoPorBusquedas)
 })

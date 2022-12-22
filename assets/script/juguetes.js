@@ -1,4 +1,5 @@
-import {cards, filtradoPorBusqueda,} from '../../module/funciones.js'
+
+import {cards, filtradoPorBusqueda} from '../../module/funciones.js'
 
 const div3 = document.getElementById('divrow2');
 const search = document.getElementById('search')
