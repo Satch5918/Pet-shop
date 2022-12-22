@@ -15,7 +15,7 @@ export function cards (div,objdato) {
     });
 div.innerHTML = stringcard;
 }
-
+ 
 
 export function filtradoPorBusqueda(nombres, searchsvalue){
     return nombres.filter(nombre => nombre.producto.toLowerCase().includes(searchsvalue.toLowerCase())) 
@@ -32,10 +32,10 @@ export function CardDetails(contain,datosCard){
   <h3>${datosCard.producto}</h3>
   <h4>Stock: ${datosCard.disponibles} U </h4>
   <p class="pdetails" >${datosCard.descripcion}</p>
-  <p>Price: $${datosCard.precio}</p>
+  <p class="priceDetails">Precio: $${datosCard.precio}</p>
   <div class="btn-group ">
-    <a href="#" class="btn btn-dark butonDetails" aria-current="page">Buy</a>
-    <a href="./index.html" class="btn btn-dark butonDetails">Carrito</a>
+    <a href="#" class="btn btn-dark butonDetails" aria-current="page">Comprar</a>
+    <a href="./index.html" class="btn btn-dark butonDetails">Agregar al carrito</a>
   </div>
   </div>`  
 }
