@@ -9,7 +9,7 @@ export function cards (div,objdato) {
             <div><p class="card-link textocard"> Stock: ${card.disponibles} U</p></div>
             <div class="card-body bodycard">
                 <p class="card-link textocard">Price: $ ${card.precio}</p>
-                <a href="./carrito.html?id=${card._id} " class="card-link button">Details</a>
+                <a href="./detalles.html?id=${card._id} " class="card-link button">Details</a>
                 </div>
             </div>`;    
     });
