@@ -20,19 +20,19 @@ export function filtradoPorBusqueda(nombres, searchsvalue){
     return nombres.filter(nombre => nombre.producto.toLowerCase().includes(searchsvalue.toLowerCase())) 
 }
 
-
 export function CardDetails(contain,datosCard){
   contain.innerHTML = `<div id="divdetals1">
   <img id="imgdetail" src=${datosCard.imagen} alt="">
   </div>
+
   <div id="divdetals2">
   <h3>${datosCard.producto}</h3>
+  <h4>Stock: ${datosCard.disponibles} U </h4>
   <p class="pdetails" >${datosCard.descripcion}</p>
   <p>Price: $${datosCard.precio}</p>
   <div class="btn-group ">
-    <a href="#" class="btn btn-primary active butonDetails" aria-current="page">Buy</a>
-    <a href="./index.html" class="btn btn-primary butonDetails">Back</a>
+    <a href="#" class="btn btn-dark butonDetails" aria-current="page">Buy</a>
+    <a href="./index.html" class="btn btn-dark butonDetails">Carrito</a>
   </div>
   </div>`  
 }
-
