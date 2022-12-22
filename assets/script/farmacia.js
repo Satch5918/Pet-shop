@@ -1,6 +1,9 @@
 import {cards, filtradoPorBusqueda} from '../../module/funciones.js'
 const div2 = document.getElementById('divrow1');
 const search = document.getElementById('search')
+let boton;
+
+
 
 let datos;
 let farmacia;
@@ -9,6 +12,8 @@ fetch('https://mindhub-xj03.onrender.com/api/petshop')
   .then(result => result.json())
   .then(capturarDatos =>{
     datos = capturarDatos;
+
+    boton = document.getElementById('myButton')
     farmacia = datos.filter( card => card.categoria === "farmacia" )
     cards(div2,farmacia);
 }).catch( error => {
@@ -19,3 +24,7 @@ search.addEventListener('input', () => {
 let filtradoPorBusquedas = filtradoPorBusqueda(farmacia,search.value)
 cards(div2,filtradoPorBusquedas)
 })
+
+/* boton.addEventListener('click', () =>{
+  alert("laskjd")
+}) */

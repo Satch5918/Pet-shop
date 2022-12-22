@@ -33,6 +33,13 @@ h5{
     font-weight: bold;
     font-size: 21px;
 }
+.imgancor{
+
+}
+.imgancor:hover{
+    border: 3px solid black;
+}
+
 .bodycard{
     display: flex;
     justify-content:space-between;
@@ -155,6 +162,11 @@ color: #000501;
     font-size: 16px;
     font-weight: bold;
 }
+
+.butonCards{
+    margin-bottom: 5px;
+}
+
 .seccion2{
     margin: 100px 0;
     display: flex;
@@ -182,7 +194,7 @@ color: #000501;
     transition: all 400ms ease;
 }
 #card-3:hover{
-    box-shadow: 50px 80px 50px rgba(0,0,0,0.4);
+    filter: saturate(200%);
 }
 
 .cardimg{
@@ -268,6 +280,13 @@ h3{
     justify-content: center;
     margin: 50px 0;
 }
+#decrement,#increment{
+    background-color: #000000;
+    color: white;
+}
+.inputcarrito{
+    width: 50px;
+}
 
 caption{
     caption-side:top;
@@ -277,7 +296,7 @@ caption{
     font-size: 25px;
     
 }
-table{
+/* table{
     background-color:#ced7c092;
     font-size:17px;
     color: black;
@@ -303,7 +322,7 @@ td, th {
 th {
     color: white;
 	background: #6e68b187;
-}
+} */
 .even {
 	background: #000000;
 }
