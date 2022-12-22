@@ -92,9 +92,18 @@ h5{
 #imgHome{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 50px 0;
+    padding: 20px;
+    gap: 10px;
 }
+
+.imgH{
+    height:200px;
+    border: 1px solid black ;
+}
+
 #mainCarrito{
     margin: 100px 0;
 }
@@ -456,6 +465,7 @@ input[type="checkbox"]:checked{
 }
 }
 
+
 @media (max-width: 444px){
     #logo{
         height: 60px;
@@ -549,4 +559,44 @@ display: flex;
     align-items: center;
     justify-content:center;
 }
+}
+
+@media (min-width:450px) and (max-width: 850px) {
+    
+    #imgHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+    }
+    
+}
+
+@media (min-width: 519px) and (max-width: 930px) {
+    .h1header{
+        font-size: 40px;
+       
+    }
+    #logo{
+        height: 50px;
+    }
+}
+
+@media (max-width:519px) {
+    .h1header{
+        font-size: 20px;
+    }
+    #logo{
+        height: 50px;
+    }
+    .imgH{
+        height: 180px;
+    }
+    #logo-carrito{
+        height: 50px;
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+    }
 }
