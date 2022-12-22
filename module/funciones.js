@@ -16,15 +16,12 @@ export function cards (div,objdato) {
 div.innerHTML = stringcard;
 }
 
-
 export function filtradoPorBusqueda(nombres, searchsvalue){
     return nombres.filter(nombre => nombre.producto.toLowerCase().includes(searchsvalue.toLowerCase())) 
 }
 
-
 export function CardDetails(contain,datosCard){
   contain.innerHTML = `<div id="divdetals1">
-  
   <img id="imgdetail" src=${datosCard.imagen} alt="">
   </div>
 

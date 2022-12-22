@@ -20,6 +20,8 @@ nav{
     height: 20vh;
     background-image: url("../img/baner\ verde.jpg");
 }
+
+
 .cartas{
     display: flex;
     flex-direction: column;
@@ -249,9 +251,6 @@ caption{
     font-size: 25px;
     
 }
-
-
-
 table{
     background-color:#ced7c092;
     font-size:17px;
