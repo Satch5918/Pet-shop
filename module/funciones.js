@@ -11,7 +11,7 @@ export function cards (div,objdato) {
                 <p class="card-link textocard">Price: $ ${card.precio}</p>
                 </div>
                 <div>
-                <a href="#"  id="myButton" class="btn btn-dark butonCards">Añadir al Carrito</a>
+                <button onclick="addCarrito()" id="${card._id}" class="btn btn-dark butonCards">Añadir al Carrito</button>
                 </div>
             </div>`;    
     });
@@ -21,6 +21,16 @@ div.innerHTML = stringcard;
 export function filtradoPorBusqueda(nombres, searchsvalue){
     return nombres.filter(nombre => nombre.producto.toLowerCase().includes(searchsvalue.toLowerCase())) 
 }
+
+
+export function addCarrito(producto) {
+    console.log(producto);
+    let resultado = producto.map(element => element._id);
+    let rta;
+    rta = resultado.find(elem => elem === element._id);
+    console.log(rta); 
+}
+
 
 export function CardDetails(contain,datosCard){
     contain.innerHTML = `<div id="divdetals1">
@@ -37,7 +47,3 @@ export function CardDetails(contain,datosCard){
     </div>
     </div>`  
 }
-
-
-
-

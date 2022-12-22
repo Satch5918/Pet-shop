@@ -9,21 +9,22 @@ let decrementButton;
 
 
 fetch('https://mindhub-xj03.onrender.com/api/petshop')
-  .then(result => result.json())
-  .then(capturarDatos =>{
+    .then(result => result.json())
+    .then(capturarDatos =>{
     datos = capturarDatos;
     renderCarrito(carrito,datos,fragment)
+    
 }).catch( error => {
-  console.log("error:",error);
+    console.log("error:",error);
 });
 
 
 
- function renderCarrito(contain,events,fragment) {    
+function renderCarrito(contain,events,fragment) {    
     events.forEach(producto => { 
         let div = document.createElement('tr');
         div.innerHTML = `
-        <td>1</td>
+        <td>#</td>
     <td>${producto.producto}</td>
     <td>${producto.precio}</td>
     <td>
