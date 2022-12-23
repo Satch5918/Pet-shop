@@ -33,11 +33,10 @@ h5{
     font-weight: bold;
     font-size: 21px;
 }
-.imgancor{
 
-}
-.imgancor:hover{
+.cardimg:hover{
     border: 3px solid black;
+
 }
 .card{
     display: flex;
