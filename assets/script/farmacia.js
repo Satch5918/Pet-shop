@@ -74,4 +74,3 @@ keyArray = JSON.stringify(keyArray);
 localStorage.setItem('keyCarrito', keyArray);
 }
 
-

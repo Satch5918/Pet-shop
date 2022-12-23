@@ -823,6 +823,9 @@ display: flex;
         bottom: 50px;
         right: 20px;
     }
+    iframe{
+        height: 250px;
+    }
   
     #butonNav{
         margin-right: 20px !important;
