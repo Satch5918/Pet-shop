@@ -29,65 +29,97 @@
     </nav>
     <header class="header">
         <h1 class="h1header"><img id="logo" src="./assets/img/iconoPatita.png"> THE ANIMAL KINDOM <img id="logo" src="./assets/img/iconoPatita.png"></h1>
-        <h2>Contactenos</h2>
     </header>
-    
-    <main id="mainform">
+
+
+    <main id="form-ubication">
         
-        <form id="form">
-            <!-- Name input -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="form4Example1">Nombre y Apellido: </label>
-                <input type="text" id="form4Example1" class="form-control" />
-            </div>
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="form4Example2">Teléfono: </label>
-                <input type="tel" id="form4Example2" class="form-control" />
-
-            </div>
-
-
-            <div class="form-outline mb-4">
-                <label class="form-label" for="form4Example1">Mascota: </label>
-                <input type="text" id="form4Example1" class="form-control" />
-            </div>
-
-            <!-- Message input -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="form4Example3">Comentarios: </label>
-                <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-
-            </div>
-            <!-- Checkbox -->
-            <div class="form-check d-flex justify-content-center mb-4">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
-                <label class="form-check-label" for="form4Example4">
-                Send me a copy of this message
-                </label>
-            </div>
-            <!-- Submit button -->
-            <div id="divbuton">
-            <button type="submit" class="btn btn-primary btn-block mb-4 botonform">Send</button>
-        </div>
-        </form>
     </main>
+
+    <div class="d-flex flex-wrap justify-content-around align-items-center flex-xl-row gap-4 p-4" id="container.contact">
+        <div class="container-form col-10 col-md-5 col-lg-5">
+            <form id="form" action="" method="get">
+                <h2>CONTACTO</h2>
+                <fieldset>
+                    <label class="form-label" for="form4Example1">Nombre y Apellido: </label>
+                    <input type="text" id="form4Example1" class="form-control" placeholder="Ingrese su Nombre y Apellido"/>
+                </fieldset>
+                <fieldset>
+                    <label class="form-label" for="form4Example2">Teléfono: </label>
+                    <input type="tel" id="form4Example2" class="form-control" placeholder="Ingrese su Teléfono"/>
+                </fieldset>
+                <fieldset>
+                    <h5>¿Que mascota tienes?</h5>
+                    <select id="mascota">
+                        <option value="info" selected>Selecciona tu mascota</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="hamster">Hámsters</option>
+                        <option value="otro" >Otro...</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Comentarios</legend>
+                    <textarea name="comentarios" id="comentarios" maxlength="500"></textarea>
+                </fieldset>
+
+                <fieldset class="button-send d-flex justify-content-center">
+                    <input type="submit" id="submit-btn" onclick="mialerta();" value="ENVIAR"/>
+                </fieldset>
+            </form>
+            <script>
+                function mialerta() {  
+                    alert("Tus datos se enviaron con Exito! A la brevedad nos podremos en Contacto!");
+                } 
+            </script>
+        </div>
+        <div class="ubication d-flex flex-column align-items-center">
+          <h2>UBICACIÓN</h2>
+          <p>Nos encontramos en Río de Janeiro 300 (Caballito)📍</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3283.698031802572!2d-58.4304098!3d-34.6117966!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses-419!2sar!4v1660106463368!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
     <section >            
         <a href="./carrito.html"><img src="./assets/img/bolsa-de-la-compra.png" id="logo-carrito" alt="carrito"></a>
             </section>
-    <footer class="footer">
-        <div>
-            <a href="#"><img class="redsocial" src="./assets/img/instagram.png" alt=""></a>
-            <a href="#"><img class="redsocial" src="./assets/img/facebook.png" alt=""></a>
-            <a href="#"><img class="redsocial" src="./assets/img/whatsapp.png" alt=""></a>
-        </div>
-        <div>
-            <h3 class="h3footer">Cohort 39/40</h3>
-        </div>
-    </footer>
+            <footer class="bg-secundary d-flex flex-column justify-content-center">
+                <div class="d-flex flex-wrap justify-content-center pt-4 pb-5 gap-3">
+                    <div class="px-5 pt-4">
+                        <nav class="social-container">
+                        <ul class="list-unstyled d-flex">
+                            <li class="p-2"><a href="#"><img class="redsocial" src="./assets/img/instagram.png" alt=""></a></li>
+                            <li class="p-2"><a href="#"><img class="redsocial" src="./assets/img/whatsapp.png" alt=""></a></li>
+                            <li class="p-2"><a href="#"><img class="redsocial" src="./assets/img/facebook.png" alt=""></a></li>
+                        </ul>
+                        </nav>
+                    </div>
+                    <div class="d-flex flex-column px-5 pt-4">
+                        <h2 class="pb-4">Links de Interés</h2>
+                        <div class="d-flex flex-column gap-3">
+                            <span><a class="a-footer2" href="./contacto.html">Contacto</a></span>
+                            <span><a class="a-footer2" href="./farmacia.html">Remedios</a></span>
+                            <span><a class="a-footer2" href="./juguetes.html">Juguetes</a></span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column px-5 pt-4">
+                        <h2 class="pb-4">Contactanos</h2>
+                        <div class="d-flex flex-column gap-3">
+                            <span>Río de Janeiro 300, Caballito</span>
+                            <span><a class="a-footer2" href="tel:+54923232323">+54 9 23232323</a></span>
+                            <span><a class="a-footer2" href="mailto:theanimalkindom@gmail.com">theanimalkindom.petshop@gmail.com</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="width-container d-flex flex-column flex-sm-row justify-content-center align-items-center py-3 gap-1">
+                    <p class="fs-5 text-uppercase">Derechos reservados ©</p>
+                    <p class="fs-5 text-uppercase"> The Animal Kindom2022</p>
+                </div>
+            </footer>
 
     
 
+    <script src="./assets/script/contacto.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
