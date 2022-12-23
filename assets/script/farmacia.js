@@ -2,6 +2,7 @@ const div2 = document.getElementById('divrow1');
 const search = document.getElementById('search')
 let boton;
 
+
 function getLocalStorage(){
   let setAsString = localStorage.getItem('keyCarrito');
   let setAsArray = JSON.parse(setAsString);

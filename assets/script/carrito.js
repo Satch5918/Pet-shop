@@ -17,13 +17,11 @@
      datos = capturarDatos;
      setAsString = localStorage.getItem('keyCarrito');
      setAsArray = JSON.parse(setAsString);
-
- renderCarrito(carrito,setAsArray,fragment)
-
-    
+     renderCarrito(carrito,setAsArray,fragment)
  }).catch( error => {
      console.log("error:",error);
  });
+
 
 
 
@@ -35,11 +33,9 @@
     <td>${producto.producto}</td>
     <td>${producto.precio}</td>
     <td>
-        <button id="decrement"> - </button>
-        <input class="inputcarrito" type="text" id="value" value="1" min="1">        
-        <button id="increment"> + </button>
+        <input class="inputcarrito" type="number" id="value" value="1" min="1" max="${producto.disponibles}">
     </td>
-    <td>${producto.precio}</td>
+    <td>${producto.precio} </td>
     <button class="border-0 bg-transparent">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#4f706f"
         class="bi bi-trash delete" style="z-index: 2;" viewBox="0 0 16 16">
@@ -126,10 +122,5 @@ finalizarCompra.addEventListener('click', (e) =>{
                         )
                     }
                 })
-               
             }
         }
-
-
-
-        

@@ -46,6 +46,9 @@ footer{
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.717);
     background-color:#f0ebe34c;
 }
+.algo1{
+    height: 20000px;
+}
 .container-form h2, .ubication h2{
     width: 50vh;
     text-align: center;
