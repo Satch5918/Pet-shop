@@ -22,9 +22,10 @@ renderCarrito(carrito,setAsArray,fragment)
     console.log("error:",error);
 });
 
-
+let cant;
 
 function renderCarrito(contain,events,fragment) {    
+ cant = document.getElementById('value')
     events.forEach(producto => { 
         let div = document.createElement('tr');
         div.innerHTML = `
