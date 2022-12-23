@@ -150,6 +150,19 @@ h5{
     font-weight: bold;
     font-size: 21px;
 }
+.imgancor{
+
+}
+.imgancor:hover{
+    border: 3px solid black;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .bodycard{
     display: flex;
     justify-content:space-between;
@@ -168,7 +181,14 @@ h5{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
+.ultimas{
+    background-color: rgb(195, 8, 8);
+    border-radius: 10px ;
+    padding: 5px;
+}
+#logo1{
+height: 135px;
+}
 .button:hover{
     background-color:black;
     color: white;
@@ -197,14 +217,23 @@ h5{
     background-color: transparent;
     font-weight: bold;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 #imgHome{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 50px 0;
+    padding: 20px;
+    gap: 10px;
 }
+
+.imgH{
+    height:200px;
+    border: 1px solid black ;
+}
+
 #mainCarrito{
     margin: 100px 0;
 }
@@ -271,7 +300,13 @@ color: #000501;
 .textocard{
     font-size: 16px;
     font-weight: bold;
+   margin: 10px 3px 10px 3px;
 }
+
+.butonCards{
+    margin-bottom: 25px;
+}
+
 .seccion2{
     margin: 100px 0;
     display: flex;
@@ -293,24 +328,25 @@ color: #000501;
 
 
 #card-3{
-    background-color: #5a5c90;
+    background-color: #2d9bcb;
     color: #ede6f2;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.8);
     transition: all 400ms ease;
 }
 #card-3:hover{
-    box-shadow: 50px 80px 50px rgba(0,0,0,0.4);
+    filter: saturate(150%);
 }
 
 .cardimg{
-    height: 200px;
+    height: 250px;
     width: 280px;
+    margin-top: 10px;
 }
 .card{
     display: flex;
     justify-content:center;
     align-items: center;
-    width: 400px;
+    width: 300px;
     background-color:#80CFA9;
     margin:10px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
@@ -340,7 +376,7 @@ h3{
 }
 
 .h3footer{
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 0 20px;
     text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
@@ -385,6 +421,13 @@ h3{
     justify-content: center;
     margin: 50px 0;
 }
+#decrement,#increment{
+    background-color: #000000;
+    color: white;
+}
+.inputcarrito{
+    width: 50px;
+}
 
 caption{
     caption-side:top;
@@ -394,33 +437,7 @@ caption{
     font-size: 25px;
     
 }
-table{
-    background-color:#ced7c092;
-    font-size:17px;
-    color: black;
-    font-weight: bold;
-    margin: 15px 0;
-}
-table , td, th {
-	border: 1px solid #000000;
-	border-collapse: collapse;
-}
 
-.tdtable{
-    font-size: 25px;
-    font-weight: bold;
-    background-color: #6db5d6b8;
-}
-
-td, th {
-	padding: 3px;
-	width: 30px;
-	height: 25px;
-}
-th {
-    color: white;
-	background: #6e68b187;
-}
 .even {
 	background: #000000;
 }
@@ -444,28 +461,27 @@ th {
 }
 
 .pdetails{
-    text-align: center;
+   font-size: 20px;
 }
 
-.cardsdetail{
-    width:80%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
+
 
 #maindetails{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
+    justify-content: space-around;
+
 }
 #imgdetail{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
+    margin: 30px 0px 0px 50px;
+    width: 500px;
     height: 400px;
+    margin-left: 50px;
+    border: 3px solid black;
+}
+
+.priceDetails{
+    font-size: 20px;
+
 }
 
 .containerss{
@@ -553,6 +569,7 @@ input[type="checkbox"]:checked{
     
 }
 }
+
 
 @media (max-width: 444px){
     #logo{
@@ -647,4 +664,44 @@ display: flex;
     align-items: center;
     justify-content:center;
 }
+}
+
+@media (min-width:450px) and (max-width: 850px) {
+    
+    #imgHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+    }
+    
+}
+
+@media (min-width: 519px) and (max-width: 930px) {
+    .h1header{
+        font-size: 40px;
+       
+    }
+    #logo{
+        height: 50px;
+    }
+}
+
+@media (max-width:519px) {
+    .h1header{
+        font-size: 20px;
+    }
+    #logo{
+        height: 50px;
+    }
+    .imgH{
+        height: 180px;
+    }
+    #logo-carrito{
+        height: 50px;
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+    }
 }
