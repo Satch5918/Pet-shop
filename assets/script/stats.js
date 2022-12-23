@@ -28,4 +28,3 @@ fetch('https://amazing-events.onrender.com/api/events')
     console.log("error:",error);
 });
 
-
