@@ -43,7 +43,6 @@ export function CardDetails(contain,datosCard){
     <p>Price: $${datosCard.precio}</p>
     <div class="btn-group ">
     <a href="#" class="btn btn-dark butonDetails" aria-current="page">Comprar</a>
-    <a href="" class="btn btn-dark butonDetails">Añadir al Carrito</a>
     </div>
     </div>`  
 }
