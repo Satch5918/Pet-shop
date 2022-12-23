@@ -1,12 +1,15 @@
 let carrito = document.getElementById('tbodyCarrito')
 let fragment = document.createDocumentFragment();
 let finalizarCompra = document.getElementById('finalizarCompra')
+let cant = document.getElementById('value')
 let datos;
+
 
 let setAsString = [];
 let setAsArray = [];
 let incrementButton; 
 let decrementButton;
+
 
 fetch('https://mindhub-xj03.onrender.com/api/petshop')
     .then(result => result.json())
@@ -14,7 +17,7 @@ fetch('https://mindhub-xj03.onrender.com/api/petshop')
     datos = capturarDatos;
     setAsString = localStorage.getItem('keyCarrito');
     setAsArray = JSON.parse(setAsString);
-
+    cant = document.getElementById('value')
 renderCarrito(carrito,setAsArray,fragment)
 
     
@@ -22,25 +25,23 @@ renderCarrito(carrito,setAsArray,fragment)
     console.log("error:",error);
 });
 
-let cant;
+let cantidad;
 
-function renderCarrito(contain,events,fragment) {    
- cant = document.getElementById('value')
+function renderCarrito(contain,events,fragment) { 
     events.forEach(producto => { 
         let div = document.createElement('tr');
         div.innerHTML = `
         <td>#</td>
     <td>${producto.producto}</td>
     <td>${producto.precio}</td>
-    <td>
-        <button id="decrement"> - </button>
-        <input class="inputcarrito" type="text" id="value" value="1" min="1">        
-        <button id="increment"> + </button>
+    <td>        
+        <input class="inputcarrito" type="number" id="value" value="1" min="1" max="${producto.disponibles}"> 
     </td>
     <td>${producto.precio}</td>
     <td><button>Eliminar</button></td>
         `;
-        fragment.appendChild(div)    
+        fragment.appendChild(div)
+      
     });
     contain.appendChild(fragment);
 }
