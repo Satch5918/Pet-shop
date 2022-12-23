@@ -1,8 +1,10 @@
 
  let carrito = document.getElementById('tbodyCarrito')
  let fragment = document.createDocumentFragment();
- let finalizarCompra = document.getElementById('finalizarCompra')
+ let finalizarCompra = document.getElementById('clear-btn')
  let datos;
+ let modal = document.getElementById('modales')
+ let aceptar = document.getElementById('aceptar')
 
  let setAsString = [];
  let setAsArray = [];
@@ -30,15 +32,15 @@
          let div = document.createElement('tr');
          div.innerHTML = `
          <td>#</td>
-     <td>${producto.producto}</td>
-     <td>${producto.precio}</td>
-     <td>
-         <button id="decrement"> - </button>
-         <input class="inputcarrito" type="text" id="value" value="1" min="1">        
-         <button id="increment"> + </button>
-     </td>
-     <td>${producto.precio}</td>
-     <button class="border-0 bg-transparent">
+    <td>${producto.producto}</td>
+    <td>${producto.precio}</td>
+    <td>
+        <button id="decrement"> - </button>
+        <input class="inputcarrito" type="text" id="value" value="1" min="1">        
+        <button id="increment"> + </button>
+    </td>
+    <td>${producto.precio}</td>
+    <button class="border-0 bg-transparent">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#4f706f"
         class="bi bi-trash delete" style="z-index: 2;" viewBox="0 0 16 16">
         <path
@@ -46,21 +48,49 @@
         <path fill-rule="evenodd"
         d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
         </svg>
-     </button>
+    </button>
          `;
-         fragment.appendChild(div)    
-     });
-     contain.appendChild(fragment);
+        fragment.appendChild(div)    
+    });
+    contain.appendChild(fragment);
  }
 
-//  finalizarCompra.addEventListener('click', (e) =>{
-//    if(setAsString != null ){
-//      localStorage.clear();
-//      alert("Su compra se realizo con exito!!!")
-//      location.reload();
-//  }
-//  })
+finalizarCompra.addEventListener('click', (e) =>{
+   if(setAsString !== null ){
+    localStorage.clear();
+    modal.innerHTML = `<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
 
+        <div class="modal-content p-3">
+            <div class="modal-header d-flex justify-content-center flex-column">
+                <h5 class="modal-title" id="staticBackdropLabel">Gracias por su compra!! ❤️</h5>
+            </div>
+            <div class="modal-body d-flex justify-content-center align-items-center flex-column">
+                <div class="modal-img-container w-100 d-flex justify-content-center">
+                    <img src="./assets/img/gato.jpg" width="75%" alt="">
+                </div>
+                <h5 id="actual"></h5>
+                <p class="mb-4 text-center">Si tienes alguna pregunta, comentarios o sugerencias has <a
+                        href="./contacto.html">click
+                        aqui</a>, nos encantaria saberlo :D</p>
+                <div class="d-flex flex-column gap-0 align-items-center">
+                    <p class="m-0">¿ Algún problema con tu compra ?</p>
+                    <p class="m-0 text-center">envianos un Email a <a href="mailto:theanimalkindom@gmail.com">theanimalkindom@gmail.com</a> </p>
+                    <p> o llamanos al <a href="tel:+54 9 23232323">+54 9 23232323</a></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a type="button" class="btn btn-color1" href="./index.html">Ir a Home</a>
+                <a type="button" class="btn btn-color1" href="./carrito.html">aceptar</a>
+            </div>
+        </div>
+    </div>
+</div>`
+}
+
+ })
+ 
 
  document.getElementById('clear-cart').addEventListener("click", () => {
     localStorage.clear()
@@ -70,9 +100,6 @@
     table.classList.add('justify-content-center')
     table.innerHTML = `<h1>Vaciaste el Carrito, Volve Pronto!</h1>`
     })
-
-
-
 
     carrito.addEventListener('click', deleteProduct);
         function deleteProduct(e) {
@@ -102,3 +129,7 @@
                
             }
         }
+
+
+
+        
