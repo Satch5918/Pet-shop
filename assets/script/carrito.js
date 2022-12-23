@@ -20,7 +20,6 @@ fetch('https://mindhub-xj03.onrender.com/api/petshop')
     cant = document.getElementById('value')
 renderCarrito(carrito,setAsArray,fragment)
 
-    
 }).catch( error => {
     console.log("error:",error);
 });
@@ -41,13 +40,12 @@ function renderCarrito(contain,events,fragment) {
     <td><button>Eliminar</button></td>
         `;
         fragment.appendChild(div)
-      
     });
     contain.appendChild(fragment);
 }
 
 finalizarCompra.addEventListener('click', () =>{
-  if(setAsString != null ){
+    if(setAsString != null ){
     localStorage.clear();
     alert("Su compra se realizo con exito!!!")
     location.reload();
