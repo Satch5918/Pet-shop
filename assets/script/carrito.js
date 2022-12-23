@@ -1,3 +1,4 @@
+
  let carrito = document.getElementById('tbodyCarrito')
  let fragment = document.createDocumentFragment();
  let finalizarCompra = document.getElementById('finalizarCompra')
