@@ -66,7 +66,7 @@ h5{
 }
 .ultimas{
     background-color: rgb(195, 8, 8);
-    border-radius: 2px;
+    border-radius: 10px ;
     padding: 5px;
 }
 #logo1{
@@ -100,7 +100,7 @@ height: 135px;
     background-color: transparent;
     font-weight: bold;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 #imgHome{
     display: flex;
@@ -183,10 +183,11 @@ color: #000501;
 .textocard{
     font-size: 16px;
     font-weight: bold;
+   margin: 10px 3px 10px 3px;
 }
 
 .butonCards{
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 .seccion2{
@@ -220,8 +221,9 @@ color: #000501;
 }
 
 .cardimg{
-    height: 200px;
+    height: 250px;
     width: 280px;
+    margin-top: 10px;
 }
 .card{
     display: flex;
@@ -318,28 +320,7 @@ caption{
     font-size: 25px;
     
 }
-/* table{
-    background-color:#ced7c092;
-    font-size:17px;
-    color: black;
-    font-weight: bold;
-    margin: 15px 0;
-}
-table , td, th {
-	border: 1px solid #000000;
-	border-collapse: collapse;
-}
 
-
-td, th {
-	padding: 3px;
-	width: 30px;
-	height: 25px;
-}
-th {
-    color: white;
-	background: #6e68b187;
-} */
 .even {
 	background: #000000;
 }
@@ -374,7 +355,7 @@ th {
 
 }
 #imgdetail{
-    margin-top: 30px;
+    margin: 30px 0px 0px 50px;
     width: 500px;
     height: 400px;
     margin-left: 50px;
