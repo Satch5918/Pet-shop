@@ -29,14 +29,9 @@ function contactForm(){
                 </fieldset>
 
                 <fieldset class="button-send d-flex justify-content-center">
-                    <input type="submit" id="submit-btn" onclick="mialerta();" value="ENVIAR"/>
+                    <input type="submit" id="submit-btn" value="ENVIAR"/>
                 </fieldset>
             </form>
-            <script>
-                function mialerta() {  
-                    alert("Tus datos se enviaron con Exito! A la brevedad nos podremos en Contacto!");
-                } 
-            </script>
         </div>
         <div class="ubication d-flex flex-column align-items-center">
           <h2>UBICACIÓN</h2>

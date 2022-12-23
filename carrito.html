@@ -29,12 +29,101 @@
     </nav>
     <header class="header">
         <h1 class="h1header"><img id="logo" src="./assets/img/iconoPatita.png"> THE ANIMAL KINDOM <img id="logo" src="./assets/img/iconoPatita.png"></h1>
-        <h2>Carrito de compras</h2>
     </header>
+
     <main id="mainCarrito">
 
     </main>
-    <section id="seccionCarrito">
+    <main class=" d-flex flex-column justify-content-center align-items-center">
+        <div class="row d-flex gap-2 justify-content-center w-100 mb-4 p-2">
+            <div class="col-10 d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <h1 class="pt-3 pb-3 title-cart">Mi carrito de compras</h1>
+                <a id="clear-cart" class="btn btn-color" href="#">VACIAR CARRITO</a>
+            </div>
+            <div class="col-11 col-md-10 col-xl-7 p-0"    id="seccionCarrito">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover align-middle">
+                        <thead class="table-head">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col" colspan="1">Producto</th>
+                                <th scope="col" colspan="1">Precio unitario</th>
+                                <th scope="col" colspan="1">Cantidad</th>
+                                <th scope="col" colspan="1">Precio total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyCarrito">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="order-summary col-12 col-md-8 col-xl-4 col-xxl-3">
+                <div class="bg-light d-flex summary-body">
+                    <h2>Resumen del pedido</h2>
+                    <h3>Opciones de envío</h3>
+                    <label>
+                        <input type="radio" name="envio" id="enviar" value="enviar">Envío: 1000
+                    </label>
+                    <label>
+                        <input type="radio" name="envio" id="retiro" value="retiro" checked>Retiro en Local: 0
+                    </label>
+                    <h3 class="d-inline">Total: <span id="total">0</span></h3>
+                    <a id="clear-btn" class="btn btn-color" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">Realizar compra</a>
+                    <h6 class="align-self-end">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                        </svg>
+                        Pago seguro
+                    </h6>
+                </div>
+                <div class="d-flex flex-column">
+                    <a class="btn btn-secondary btn-color3 align-self-center mt-3" href="./farmacia.html">Seguir comprando</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+
+                <div class="modal-content p-3">
+                    <div class="modal-header d-flex justify-content-center flex-column">
+                        <h5 class="modal-title" id="staticBackdropLabel">Gracias por su compra!! ❤️</h5>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center align-items-center flex-column">
+                        <div class="modal-img-container w-100 d-flex justify-content-center">
+                            <img src="./assets/img/gato.jpg" width="75%" alt="">
+                        </div>
+                        <h5 id="actual"></h5>
+                        <p class="mb-4 text-center">Si tienes alguna pregunta, comentarios o sugerencias has <a
+                                href="./contacto.html">click
+                                aqui</a>, nos encantaria saberlo :D</p>
+                        <div class="d-flex flex-column gap-0 align-items-center">
+                            <p class="m-0">¿ Algún problema con tu compra ?</p>
+                            <p class="m-0 text-center">envianos un Email a <a href="mailto:theanimalkindom@gmail.com">theanimalkindom@gmail.com</a> </p>
+                            <p> o llamanos al <a href="tel:+54 9 23232323">+54 9 23232323</a></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-color1" href="./index.html">Ir a Home</a>
+                        <a type="button" class="btn btn-color2" data-bs-dismiss="modal" href="#">Aceptar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- <main id="mainCarrito">
+
+    </main> -->
+    <!-- <section id="seccionCarrito">
         <table class="table">
             <thead>
               <tr>
@@ -57,7 +146,7 @@
                 <td><button id="finalizarCompra">Finalizar Compra</button></td>
               </tfoot>
           </table>
-    </section>
+    </section> -->
 
 
     <footer class="bg-secundary d-flex flex-column justify-content-center">
@@ -96,5 +185,6 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script type="module" src="./assets/script/carrito.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
